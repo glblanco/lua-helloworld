@@ -1,3 +1,17 @@
+function love.load()
+    x=100
+end
+
+function love.update(dt)
+    x = x + (5 * dt)
+end
+
 function love.draw()
-    love.graphics.print("Hello World!", 100, 100)
+    love.graphics.rectangle("line",x,100,50,80)
+end
+
+function printToFile(text)
+    -- file = io.open ('output.log', 'w')
+    io.output('output.log')
+    io.write(text)
 end
